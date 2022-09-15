@@ -1,0 +1,21 @@
+// The protobuf syntax version
+syntax = "proto3";
+
+// The package definition
+package dummyPackage;
+
+// The service definition
+service Dummy {
+    // An RPC method
+    rpc PingPong(PingRequest) returns (PongResponse) {};
+}
+
+// The request message
+message PingRequest {
+    string message = 1;
+}
+
+// The response message
+message PongResponse {
+    string message = 1;
+}
