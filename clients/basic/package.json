@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@grpc/grpc-js": "^1.7.0",
     "@grpc/proto-loader": "^0.7.2"
   }
