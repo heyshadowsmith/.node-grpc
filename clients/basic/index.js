@@ -9,7 +9,7 @@ const grpc = require('@grpc/grpc-js')
 const protoLoader = require('@grpc/proto-loader')
 
 const PORT = 8082
-const PROTO_FILE = './proto/dummy.proto'
+const PROTO_FILE = '../../server/proto/dummy.proto'
 
 // Load dummyPackage protobuf file's package definition - https://www.npmjs.com/package/@grpc/proto-loader
 const packageDef = protoLoader.loadSync(path.resolve(__dirname, PROTO_FILE))
