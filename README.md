@@ -1,8 +1,7 @@
 # Node gRPC
 
-This is an example repo that includes a Node gRPC server and client including detailed anatomy notes and references.
+This is an example repo that includes a Node gRPC server and multiple clients including detailed anatomy notes and references.
 
 ## How to use
-1. Install dependencies with `npm install`.
-2. Run the server with `npm run server`.
-3. In another terminal, run the client with `npm run client`.
+1. Run the server by following the instructions in its README.
+2. Run a client of your choosing by following the instructions in its README.

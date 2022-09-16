@@ -1,11 +1,10 @@
 {
-  "name": "node-grpc",
+  "name": "node-grpc-basic-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic Node gRPC client",
   "main": "index.js",
   "scripts": {
-    "server": "node server",
-    "client": "node client"
+    "start": "node index"
   },
   "keywords": [],
   "author": "",
