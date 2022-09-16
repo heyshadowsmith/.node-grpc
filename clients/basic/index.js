@@ -8,7 +8,6 @@ const grpc = require('@grpc/grpc-js')
 // https://www.npmjs.com/package/@grpc/proto-loader
 const protoLoader = require('@grpc/proto-loader')
 
-const PORT = 8082
 const PROTO_FILE = '../../server/proto/dummy.proto'
 
 // Load dummyPackage protobuf file's package definition - https://www.npmjs.com/package/@grpc/proto-loader
@@ -20,7 +19,7 @@ const grpcObj = grpc.loadPackageDefinition(packageDef)
 // Create gRPC client - https://grpc.github.io/grpc/node/grpc.Client.html#toc0__anchor
 const client = new grpcObj.dummyPackage.Dummy(
     // Parameters - https://grpc.github.io/grpc/node/grpc.Client.html#Client__anchor
-    `0.0.0.0:${PORT}`, // Server address to connect to
+    '0.0.0.0:4001', // Server address to connect to
     grpc.credentials.createInsecure() // Credentials to use to connect to the server
 )
 
