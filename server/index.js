@@ -42,8 +42,8 @@ function getServer() {
     // Add service to gRPC Server
     server.addService(dummyPackage.Dummy.service, {
         // Add RPC resolver
-        PingPong: (_req, res) => {
-            res(null, { message: 'Pong' })
+        PingPong: (req, res) => {
+            res(null, req.request)
         }
     })
 
