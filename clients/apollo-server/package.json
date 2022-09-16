@@ -1,7 +1,7 @@
 {
-  "name": "node-grpc-basic-client",
+  "name": "node-grpc-apollo-server-client",
   "version": "1.0.0",
-  "description": "Basic Node gRPC client",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index"
@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server": "^3.5.0",
+    "graphql": "^16.6.0",
     "@grpc/grpc-js": "^1.7.0",
     "@grpc/proto-loader": "^0.7.2"
   }

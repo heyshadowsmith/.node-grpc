@@ -8,7 +8,6 @@ const grpc = require('@grpc/grpc-js')
 // https://www.npmjs.com/package/@grpc/proto-loader
 const protoLoader = require('@grpc/proto-loader')
 
-const PORT = 8082
 const PROTO_FILE = './proto/dummy.proto'
 
 // Load dummyPackage protobuf file's package definition - https://www.npmjs.com/package/@grpc/proto-loader
@@ -23,7 +22,7 @@ function main() {
     const server = getServer()
     
     // Start server
-    server.bindAsync(`0.0.0.0:${PORT}`, 
+    server.bindAsync('0.0.0.0:4001', 
     grpc.ServerCredentials.createInsecure(),
     (error, port) => {
         if (error) {
@@ -31,7 +30,7 @@ function main() {
             return
         }
 
-        console.log(`Your server has started on ${port}.`)
+        console.log(`Node gRPC server is ready at http://localhost:${port}/`)
 
         server.start()
     })
@@ -43,8 +42,8 @@ function getServer() {
     // Add service to gRPC Server
     server.addService(dummyPackage.Dummy.service, {
         // Add RPC resolver
-        PingPong: (_req, res) => {
-            res(null, { message: 'Pong' })
+        PingPong: (req, res) => {
+            res(null, req.request)
         }
     })
 
