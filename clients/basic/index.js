@@ -39,7 +39,7 @@ client.waitForReady(
 
         // Call RPC method 
         client.PingPong({
-            message: 'Ping'
+            message: 'Pong'
         },
         // The callback to call when finished attempting the RPC method call
         (error, result) => {
