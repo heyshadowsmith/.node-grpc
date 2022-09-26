@@ -1,0 +1,17 @@
+{
+  "name": "node-grpc-crud-server",
+  "version": "1.0.0",
+  "description": "CRUD Node gRPC server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.7.0",
+    "@grpc/proto-loader": "^0.7.2",
+    "uuid": "^9.0.0"
+  }
+}
