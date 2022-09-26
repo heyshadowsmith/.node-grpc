@@ -52,7 +52,7 @@ function getServer() {
 }
 
 function initializeDummyClient() {
-    const PROTO_FILE = '../../server/proto/dummy.proto'
+    const PROTO_FILE = '../../../servers/basic/proto/dummy.proto'
 
     const packageDef = protoLoader.loadSync(path.resolve(__dirname, PROTO_FILE))
 
