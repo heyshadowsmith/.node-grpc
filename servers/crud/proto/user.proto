@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package userPackage;
+
+service User {
+    rpc GetGroups (Empty) returns (GroupsResponse) {};
+    rpc GetGroup(GetGroupRequest) returns (GroupResponse) {};
+    rpc GetUsers(Empty) returns (UsersResponse) {};
+    rpc AddUser(AddUserRequest) returns (UserResponse) {};
+    rpc GetUser(GetUserRequest) returns (UserResponse) {};
+    rpc UpdateUser(UpdateUserRequest) returns (UserResponse) {};
+    rpc DeleteUser(DeleteUserRequest) returns (UserResponse) {};
+}
+
+message GroupsResponse {
+    repeated GroupResponse groups = 1;
+}
+
+message GetGroupRequest {
+    required string id = 1;
+}
+
+message GroupResponse {
+    string id = 1;
+    string title = 2;
+    repeated string users = 3;
+}
+
+message UsersResponse {
+    repeated UserResponse users = 1;
+}
+
+message GetUserRequest {
+    required string id = 1;
+}
+
+message AddUserRequest {
+    required string firstName = 1;
+    required string lastName = 2;
+}
+
+message UpdateUserRequest {
+    required string id = 1;
+    optional string firstName = 2;
+    optional string lastName = 3;
+}
+
+message DeleteUserRequest {
+    required string id = 1;
+}
+
+message UserResponse {
+    string id = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string group = 4;
+}
+
+message Empty {}
