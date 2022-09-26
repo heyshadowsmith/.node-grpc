@@ -7,7 +7,7 @@ const protoLoader = require('@grpc/proto-loader')
 async function main() {
     try {
         const server = getServer()
-        const { url } = await server.listen({ port: process.env.PORT || 4002 })
+        const { url } = await server.listen({ port: process.env.PORT || 4003 })
 
         console.log(`Apollo Server is ready at ${url}`)
     } catch (error) {
