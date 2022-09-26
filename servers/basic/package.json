@@ -1,7 +1,7 @@
 {
-  "name": "node-grpc-server",
+  "name": "node-grpc-basic-server",
   "version": "1.0.0",
-  "description": "Node gRPC server",
+  "description": "Basic Node gRPC server",
   "main": "index.js",
   "scripts": {
     "start": "node index"
