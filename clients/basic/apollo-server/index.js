@@ -45,7 +45,8 @@ function getServer() {
             grpcDataSources: {
                 dummy: await initializeDummyClient()
             }
-        })
+        }),
+        cache: 'bounded'
     })
 
     return server
